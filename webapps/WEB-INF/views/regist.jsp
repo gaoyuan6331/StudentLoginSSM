@@ -55,6 +55,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+${formatErrors}<br>
+
 	<div id="pageTitle">
 		<h1>注册页面</h1>
 	</div>

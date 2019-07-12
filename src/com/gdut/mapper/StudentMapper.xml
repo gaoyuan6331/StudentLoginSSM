@@ -12,4 +12,8 @@
 	<insert id="regist" parameterType="com.gdut.entity.Student">
 		insert into student(studentID,studentName,password,phoneNum) values(#{studentID},#{studentName},#{password},#{phoneNum})
 	</insert>
+	<select id="queryAllStudent" resultType="com.gdut.entity.Student">
+		select * from student limit #{startIndex},#{pageSize}
+	</select>
+	
 </mapper>

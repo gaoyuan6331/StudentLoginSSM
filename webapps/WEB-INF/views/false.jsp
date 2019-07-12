@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-手机号格式错误
-
+	${cookie.formatErrors.value}
+	
+	<a href="regist">返回注册页面</a>
 </body>
 </html>

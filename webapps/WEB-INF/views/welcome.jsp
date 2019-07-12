@@ -32,6 +32,11 @@
 	top: 20%;
 }
 
+.queryAllCourse {
+	left:10%;
+	
+}
+
 li {
 	margin: 0 10px;
 	padding: 10px;
@@ -49,35 +54,52 @@ li:HOVER {
 	border-radius: 5px;
 }
 
-#service {
+.businessService {
 	position: absolute;
-	border: 2px solid #f40;
+	border: 1px solid #f40;
 	width: 40%;
 	height: 30%;
-	right: 10px;
+	right: 10%;
+	top:10%;
 }
 
 .catalog {
 	position: absolute;
-	top: 50px;
+	top: 20%;
 	border-right: 3px solid gray;
-	border-top: 30px solid gray;
-	width: 120px;
-	height: 500px;
+	border-top: 3px solid gray;
+	width: 150px;
+	height: 80%;
+	text-align:center;
 }
 
-.catalog a {
-	border: 1px solid transparent;
-	width: 40px;
-	line-height: 25px;
-	height: 25px;
-	margin: 15px 15px 5px 20px;
+.catalogTitle {
+	border: 1px solid gray;
+	background-color: #f399;
+	font-size: 18px;
+	font-weight: bold;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom-width: 3px;
+	line-height: 40px;
+	padding: 0px 22%;
+	font-size: 16px;
 }
 
-.catalog a:HOVER {
-	background-color: #f40;
-	border: 0 5px;
-	border-radius: 5px;
+.option {
+	border: 1px solid gray;
+	border-top: 1px;
+	border-left: 0px;
+	border-right: 0px;
+	border-width: 1px;
+	line-height: 40px;
+	margin-bottom: 0px;
+}
+
+.option:HOVER {
+	background-color: #888;
+	color: #999;
+	line-height: 40px;
 }
 
 .calendar {
@@ -89,30 +111,99 @@ li:HOVER {
 	bottom: 20px;
 	right: 20px;
 }
+
+.admin {
+	border-color: gray;
+	border-style: solid; background-color : #f399;
+	font-weight: bold;
+	border-left: 0px;
+	border-right: 0px;
+	border-width: 3px;
+	line-height: 40px;
+	padding: 0px 22%;
+	font-size: 16px;
+	margin-top: 100px;
+	background-color: #f399;
+}
+
+.queryAllStudent {
+	border: 1px solid gray;
+	border-left: 0px;
+	border-right: 0px;
+	line-height: 40px;
+	margin-top: 30px;
+}
+
+.queryAllStudent:HOVER {
+	background-color: #f40;
+	color: #999;
+	line-height: 40px;
+}
+
+.addStudent {
+	border: 1px solid gray;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	line-height: 40px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.addStudent:HOVER {
+	background-color: #f40;
+	color: #999;
+	line-height: 40px;
+}
 </style>
 <title>Insert title here</title>
 </head>
 <body>
-	教务系统
-
-	<div class="mydesktop">我的桌面</div>
+	<div color="yellow" font-size="28px">假装是个教务系统</div>
+	<div class="mydesktop">
+		我的桌面<br>
+	</div>
 	<div class="notice">公告通知</div>
-	<ul id="service">
-		<li><select name="infoselect">
-				<option value="infoselect" />
-		</select></li>
-		<li><a href="courseOperation">选课报名</a></li>
-		<li><a href="businessProcessing">业务办理</a></li>
-	</ul>
-	<div class="infoSelect">信息查询</div>
-	<br>
-	<form action="">
-		<div class="catalog">
-			<a href="">学籍卡片</a><br> <a href="">学习计划</a><br> <a href="">上课任务</a><br>
-			<a href="">课表查询</a><br> <a href="">考试成绩</a>
+	<div class="businessService">
+		<ul>
+			<li>
+				<a class="queryAllCourse" href="queryAllCourse">选课</a>
+			</li>
+			<li><select>
+					<option>业务办理</option>
+					<option>abc</option>
+					<option>def</option>
+					<option>asd</option>
+			</select></li>
+		</ul>
+	</div>
+	<div class="catalog">
+		<div class="catalogTitle">信 息 查 询</div>
+		<br>
+		<div class="option">
+			<a href="">学籍卡片</a>
+		</div>
+		<div class="option">
+			<a href="">学习计划</a>
+		</div>
+		<div class="option">
+			<a href="">上课任务</a>
+		</div>
+		<div class="option">
+			<a href="">课表查询</a>
+		</div>
+		<div class="option">
+			<a href="">考试成绩</a>
 		</div>
 
-	</form>
+		<div class="admin">管理員操作</div>
+		<div class="queryAllStudent">
+			<a href="queryAllStudent">查询所有学生</a>
+		</div>
+		<div class="addStudent">
+			<a href="regist">添加学生</a>
+		</div>
+	</div>
 	<div class="calendar">日历</div>
 </body>
 </html>

@@ -5,29 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>举个栗子</title>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-	/*  该function用于用户登陆的验证，其功能如下：
-		1.当用户账号为空时，警告：用户名必填！
-		2.当用户密码为空时，警告：密码必填！
-		3.通过ajax连接后端，如果账号密码验证成功，就跳转至主页，否则警告：账号或者密码错误！
-	*/
-	function login()
-	{
-		var name = $("#stduentID").val();//取值
-		var password = $("#password").val();
-		if(!name){
-			alert("用户名必填!");
-			$("#stduentID").focus();//获取焦点
-			return ;
-		}
-		if(!password){
-			alert("密码必填!");
-			$("#password").focus();//获取焦点
-			return ;
-		}
-	}
-</script>
 <style type="text/css">
 * {
 	padding: 0px;
@@ -75,23 +52,26 @@
 	top: 39%;
 	height: 12%;
 	width: 22%;
+	margin-left: 20px;
 }
 
 .passwordbox {
 	top: 55%;
 }
 
-.checkbox{
+.checkbox {
 	position: absolute;
-	zoom:180%;
+	zoom: 180%;
 	left: 67%;
-	top: 59%;
+	top: 58%;
+	margin-left: 10px;
 }
-
-.checkbox2{
+/*记住密码  */
+.checkbox2 {
 	position: absolute;
 	left: 70%;
-	top: 59%;
+	top: 57%;
+	margin-left: 20px;
 }
 
 #submit {
@@ -114,23 +94,38 @@
 	top: 80%;
 	height: 14%;
 }
+
+.error{
+top:90%;
+color:red;
+font-weight: bolder;
+}
 </style>
 <title>Insert title here</title>
 </head>
 <body>
 	<div id=loginBox>
 		<div id="login">登陆</div>
+
+		<h2>
+			<div class="error" >${error}</div>
+		</h2>
 		<form action="login" method="get">
 			<div id="inputbox">
-				<span class="studentID">学号：</span><input class="usernametbox"	type="text" placeholder="请输入学号..." name="studentID"><br>
-				${studentIDError}
-				<span class="password">密码：</span><input class="passwordbox"type="password" placeholder="请输入密码..." name="password"><br>
-				<input class="checkbox" type="checkbox" check="check"name="check"><span class="checkbox2">记住密码</span>
+				<span class="studentID">学号：</span><input class="usernametbox"
+					type="text" placeholder="请输入学号..." name="studentID"><br>
+				${studentIDError} <span class="password">密码：</span><input
+					class="passwordbox" type="password" placeholder="请输入密码..."
+					name="password"><br> <input class="checkbox"
+					type="checkbox" check="check" name="check"><span
+					class="checkbox2">记住密码</span>
 			</div>
 			<input id="submit" type="submit"
 				class="width-35 pull-right btn btn-sm btn-primary" value="Login">
 		</form>
-		<form action="regist"><button class="regist" type="submit">注册</button></form>
+		<form action="regist">
+			<button class="regist" type="submit">注册</button>
+		</form>
 	</div>
 </body>
 

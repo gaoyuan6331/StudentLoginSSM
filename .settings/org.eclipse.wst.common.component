@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="studentLoginSSH">
+    <wb-module deploy-name="studentLoginSSM">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/" source-path="/webapps"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resource"/>
-        <property name="java-output-path" value="/studentLoginSSH/build/classes"/>
-        <property name="context-root" value="studentLoginSSH"/>
+        <property name="java-output-path" value="/studentLoginSSM/build/classes"/>
+        <property name="context-root" value="studentLoginSSM"/>
     </wb-module>
 </project-modules>

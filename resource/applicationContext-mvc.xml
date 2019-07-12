@@ -6,12 +6,16 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
+	<!-- 对静态资源放行，可以对页面添加图片等静态资源 -->
 	<mvc:default-servlet-handler />
 
+	<!-- 由于静态资源的标签配制，@ResourceMapping标签失效 -->
 	<mvc:annotation-driven />
 
+	<!-- 扫描含有注解的包并添加到bean -->
 	<context:component-scan base-package="com.gdut.handler" />
 
+	<!--隐式地向 Spring容器注册Autowired、Controller等注解， <context:component-scan base-package="com.gdut.handler" />有相同的作用-->
 	<context:annotation-config />
 
 	<bean
@@ -19,7 +23,4 @@
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-
-
-
 </beans>
